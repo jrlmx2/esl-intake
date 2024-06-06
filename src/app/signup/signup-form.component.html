@@ -1,0 +1,22 @@
+<section>
+  @if (formGroup) {
+    <form [formGroup]="formGroup">
+      <aside i18n="data-explanation | data collection explanation for name, email, and town">
+        Data collected here is used by the staff to better serve our students. It helps us prepare for your arrival
+        and it helps us understand what information you need to learn about.
+      </aside>
+      <section class="form-inputs">
+        <router-outlet />
+      </section>
+      <fieldset>
+        @if (isComplete) {
+          <app-button class="form-button" name="submit" i18n="submit button | click this to use next page">Submit</app-button>
+        } @else {
+          <app-button (click)="next()" class="form-button" i18n="next button | click this to use next page" buttonText="Next" />
+        }
+      </fieldset>
+    </form>
+  } @else {
+    <-- TODO make spinner here -->
+  }
+</section>

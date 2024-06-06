@@ -1,0 +1,60 @@
+@import '../mixins.less';
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+
+  header, footer, section {
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 4px;
+    padding: 24px 12px;
+    .bottom-divider();
+
+    > * {
+      flex-grow: 1;
+    }
+
+    pre {
+      text-align: right;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h2, pre {
+      margin: 0;
+    }
+
+    .contact {
+      font-size: 0.79em;
+      font-weight: normal;
+    }
+  }
+  #signup {
+    .bottom-divider();
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    pre {
+      margin: 0;
+    }
+  }
+}

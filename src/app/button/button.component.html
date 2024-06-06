@@ -1,0 +1,10 @@
+<button
+  (click)="click()"
+  [disabled]="disabled"
+  [class]="classes ? classes.push('button') : 'button'"
+  [attr.i18n]="i18n">
+  <!--[@blink]="blink$ ? 'highlight' : 'normal'"-->
+  {{ buttonText }}
+
+
+</button>

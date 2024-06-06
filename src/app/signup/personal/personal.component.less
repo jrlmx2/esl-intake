@@ -1,0 +1,33 @@
+@import '../../../mixins.less';
+
+fieldset.personal {
+  div {
+    margin-top: 8px;
+
+    label {
+      display: block;
+      min-width: 300px;
+      .form-text();
+    }
+
+    input {
+      margin-top: 4px;
+      width:100%;
+      max-width: 100%;
+      min-width: 300px;
+      box-sizing: border-box;
+      .form-text();
+      border-radius: 8px;
+      border: 1px solid @customAccentBackgroundLight;
+      min-height: 24px;
+      padding: 4px 12px;
+      color: @churchThemeAccent;
+    }
+
+    ::placeholder {
+      .form-text();
+      font-style: italic;
+      color: @customAccentBackground;
+    }
+  }
+}

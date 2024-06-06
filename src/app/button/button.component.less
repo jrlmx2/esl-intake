@@ -1,0 +1,17 @@
+@import '../../mixins.less';
+
+.button {
+  margin-top: 16px;
+  text-align: center;
+  padding: 8px 12px;
+  min-width: 120px;
+  .form-text();
+  color: @churchThemeBackground;
+  background-color: @churchThemeAccent;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: @churchThemeAccentLight;
+    cursor: pointer;
+  }
+}
