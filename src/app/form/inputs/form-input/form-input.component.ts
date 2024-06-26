@@ -16,6 +16,7 @@ export interface FormInputInterface {
   registerControl: QuizInputRegisterCallback;
 }
 
+
 @Component({
   selector: 'app-form-input',
   standalone: true,
