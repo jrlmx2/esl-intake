@@ -1,22 +1,30 @@
 <section>
-  @if (formGroup) {
-    <form [formGroup]="formGroup">
+  @if (loading) {
+    <mat-progress-spinner color="warn" />
+  } @else {
+    <form (change)="printform()">
       <aside i18n="data-explanation | data collection explanation for name, email, and town">
         Data collected here is used by the staff to better serve our students. It helps us prepare for your arrival
-        and it helps us understand what information you need to learn about.
+        and helps us understand where you need to improve.
       </aside>
       <section class="form-inputs">
         <router-outlet />
       </section>
       <fieldset>
-        @if (isComplete) {
-          <app-button class="form-button" name="submit" i18n="submit button | click this to use next page">Submit</app-button>
+        <app-button
+          [disabled]="disablePrevious"
+          (click)="previous()"
+          class="form-button form-button-previous"
+          i18n="previous button | click this to use previous form"
+          buttonText="Previous"
+        />
+
+        @if (complete) {
+          <app-button [disabled]="!valid"  (click)="submit()" class="form-button" i18n="submit button | click this to use next page" buttonText="Submit" />
         } @else {
-          <app-button (click)="next()" class="form-button" i18n="next button | click this to use next page" buttonText="Next" />
+          <app-button [disabled]="!valid" (click)="next()" class="form-button" i18n="next button | click this to use next page" buttonText="Next" />
         }
       </fieldset>
     </form>
-  } @else {
-    <-- TODO make spinner here -->
   }
 </section>

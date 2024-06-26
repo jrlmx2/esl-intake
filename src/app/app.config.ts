@@ -27,6 +27,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withComponentInputBinding()),
     provideClientHydration(),
     provideAnimationsAsync(),
-    {provide: TitleStrategy, useClass: TemplatePageTitleStrategy},
+    {provide: TitleStrategy, useClass: TemplatePageTitleStrategy}, provideAnimationsAsync(),
   ]
 };

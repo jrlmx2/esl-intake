@@ -1,16 +1,27 @@
 @import '../../mixins.less';
 
-form {
-  margin: 26px 64px;
-  line-height: 1.2em;
 
-  aside {
-    .form-text();
-    font-size: 16px;
-  }
+section {
 
-  .form-inputs {
-    margin-top: 16px;
+  form {
+    margin: 26px 64px;
+    line-height: 1.2em;
+
+    aside {
+      .form-text();
+      font-size: 16px;
+    }
+
+    .form-inputs {
+      margin-top: 16px;
+    }
+
+    .form-button-previous {
+      margin-right: 16px;
+      @media (max-width: @screen-xs-max) {
+        margin-right: 0;
+      }
+    }
   }
 }
 

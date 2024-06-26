@@ -1,0 +1,8 @@
+<section class="radio-choices">
+  @for (choice of radio.choices; track choice.i18n) {
+    <fieldset>
+      <input type="radio" [checked]="choice.checked"  />
+      <label i18n="{{ choice.i18n }}">{{ choice.label }}</label>
+    </fieldset>
+  }
+</section>

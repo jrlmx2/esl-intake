@@ -30,7 +30,6 @@ export class ButtonComponent {
   blinked: boolean = false
 
   // blink$ = this.select('blink');
-  @Input() click!: ()=>void;
   @Input() classes?: Array<string>;
   @Input() buttonText!: string;
   @Input() disabled = false;

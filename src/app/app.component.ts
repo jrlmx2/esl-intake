@@ -8,4 +8,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.less'
 })
-export class AppComponent {}
+export class AppComponent {
+  title: string = 'intake-signup';
+}
