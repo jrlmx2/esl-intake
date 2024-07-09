@@ -39,8 +39,9 @@ div table tbody tr {
 }
 div table tbody tr td {
   position: relative;
-  border: 1px solid rgba(52, 52, 52, 0.6);
-  text-align: right;
+  border-top: 1px solid rgba(52, 52, 52, 0.6);
+  border-bottom: 1px solid rgba(52, 52, 52, 0.6);
+  text-align: center;
   font-size: 0.8em;
   padding: 4px;
   min-height: 40px;
@@ -50,7 +51,7 @@ div table tbody tr td.first {
   border-left-width: 2px;
 }
 div table tbody tr td.during {
-  background-color: rgba(255, 250, 240, 0.9);
+  background-color: rgba(255, 250, 240, 0.65);
 }
 div table tbody tr td div.today-overlay {
   position: absolute;
@@ -58,8 +59,14 @@ div table tbody tr td div.today-overlay {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(241, 249, 249, 0.8);
+  background-color: rgba(241, 249, 249, 0.6);
   z-index: 0;
+}
+div table tbody tr td:first-child {
+  border-left: 1px solid rgba(52, 52, 52, 0.6);
+}
+div table tbody tr td:last-child {
+  border-right: 1px solid rgba(52, 52, 52, 0.6);
 }
 div table tbody tr td .calendar-content {
   position: relative;
@@ -68,8 +75,10 @@ div table tbody tr td .calendar-content {
   flex-direction: column;
 }
 div table tbody tr td .calendar-content section.events {
+  margin-top: 4px;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-evenly;
   align-items: center;
   height: 24px;
 }
