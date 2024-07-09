@@ -1,0 +1,85 @@
+div {
+  width: 100%;
+}
+div .table-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  padding: 0 12px;
+}
+div .table-title h3 {
+  letter-spacing: 4px;
+  text-align: center;
+  font-weight: 400;
+  margin: 0;
+}
+div .table-title mat-icon.disabled {
+  visibility: hidden;
+}
+div table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+div table tr {
+  width: 100%;
+  height: 48px;
+}
+div table thead tr {
+  width: 100%;
+  height: 36px;
+  vertical-align: bottom;
+}
+div table thead tr th {
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+div table tbody tr {
+  background-color: rgba(255, 250, 240, 0.5);
+}
+div table tbody tr td {
+  border: 1px solid rgba(52, 52, 52, 0.6);
+  text-align: right;
+  font-size: 0.8em;
+  padding: 4px;
+  min-height: 40px;
+  vertical-align: top;
+}
+div table tbody tr td.first {
+  border-left-width: 2px;
+}
+div table tbody tr td.during {
+  background-color: rgba(255, 250, 240, 0.9);
+}
+div table tbody tr td div {
+  display: flex;
+  flex-direction: column;
+}
+div table tbody tr td div section.events {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 24px;
+}
+div .legend {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8px;
+  border: 1px solid rgba(52, 52, 52, 0.4);
+  padding: 8px 0;
+  background-color: rgba(255, 250, 240, 0.4);
+}
+div .legend .key {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 60px;
+  letter-spacing: 1px;
+}
+
+/*# sourceMappingURL=calendar.component.css.map */

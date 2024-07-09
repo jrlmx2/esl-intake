@@ -1,0 +1,22 @@
+@use "../../../theme" as theme;
+
+section {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  &.orientation {
+    background-color: #4281A4;
+  }
+
+  &.class {
+    background-color: #255555;
+  }
+
+  &.social {
+    background-color: #EB6534;
+  }
+
+  &.graduation {
+    background-color: #6F1A07;
+  }
+}

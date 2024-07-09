@@ -1,0 +1,66 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use 'theme' as theme;
+@use 'm3-theme' as material-custom-theme;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+
+  @media print {
+    body, p, div, button, section, aside, address, html, body, table, tbody, thead,
+    td, tr, th, pre, h1, h2, h3, h4, h5, h6, a, a:visited, a:active, a:hover, form, fieldset, input, textarea, select,
+    option, header, footer, span, strong, quote, img {
+      color: theme.$secondary !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      //border: 1px solid theme.$neutral-variant;
+    }
+
+    .noPrint {
+      display: none !important;
+    }
+  }
+
+  @media not print {
+    @include mat.all-component-themes(material-custom-theme.$light-theme);
+
+    @media (prefers-color-scheme: dark) {
+      @include mat.all-component-themes(material-custom-theme.$dark-theme);
+    }
+  }
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($esl-web-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($esl-web-theme);
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body {
+  margin: 0; min-height: 100vh; width: 100vw;
+  color: theme.$secondary;
+  background-color: theme.$neutral;
+}
+body, p, div, button, section, aside, address, html, body, table, tbody, thead,
+td, tr, th, pre, h1, h2, h3, h4, h5, h6, a, a:visited, a:active, a:hover, form, fieldset, input, textarea, select,
+option, header, footer, span, strong, quote, img {
+  box-sizing: border-box;
+}
+
+.flex-start > div {
+  align-items: flex-start !important;
+}

@@ -1,0 +1,135 @@
+/*
+ Old theme details
+$churchThemeAccent: #004987;
+$churchThemeAccentLight: #70BCFF;
+$churchThemeText: #2D2D2D;
+$churchThemeBackground: #F7F7F7;
+$customAccentBackground: #D8D3CD;
+$customAccentBackgroundLight: #EDEBE9;
+
+.form-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+.bottom-divider {
+  border-bottom: 1px solid $customAccentBackgroundLight;
+}
+
+/* screens *
+$screen-xs-max: 440px;*/
+
+
+$font-osans: "Open Sans", sans-serif;
+$font-lato: "Lato", sans-serif;
+
+$primary: #004987;
+$secondary: #2D2D2D;
+$tertiary: #70BCFF;
+$error: #EB171E;
+$neutral: #F7F7F7;
+$neutral-variant: #EDEBE9;
+
+$primary-pallet: (
+  0: #000000,
+  5: #001127,
+  10: #001C3A,
+  15: #00264B,
+  20: #00315E,
+  25: #003C71,
+  30: #004784,
+  35: #175392,
+  40: #28609F,
+  50: #4679B9,
+  60: #6193D5,
+  70: #7CADF2,
+  80: #A4C8FF,
+  90: #D4E3FF,
+  95: #EBF1FF,
+  98: #F9F9FF,
+  99: #FDFCFF,
+  100: #FFFFFF
+);
+$secondary-pallet: (
+  0: #000000,
+  5: #111111,
+  10: #1B1C1C,
+  15: #262626,
+  20: #303030,
+  25: #3B3B3B,
+  30: #474747,
+  35: #535252,
+  40: #5F5E5E,
+  50: #787777,
+  60: #929090,
+  70: #ACABAA,
+  80: #C8C6C6,
+  90: #E4E2E1,
+  95: #F3F0F0,
+  98: #FCF9F8,
+  99: #FEFCFB,
+  100: #FFFFFF
+);
+$tertiary-pallet: (
+  0: #000000,
+  5: #001222,
+  10: #001D33,
+  15: #002843,
+  20: #003353,
+  25: #003E64,
+  30: #004A76,
+  35: #005688,
+  40: #00639B,
+  50: #227CBB,
+  60: #4696D7,
+  70: #64B1F3,
+  80: #97CBFF,
+  90: #CEE5FF,
+  95: #E8F2FF,
+  98: #F7F9FF,
+  99: #FCFCFF,
+  100: #FFFFFF
+);
+
+$neutral-pallet: (
+  0: #000000,
+  5: #111111,
+  10: #1C1B1B,
+  15: #262625,
+  20: #313030,
+  25: #3C3B3B,
+  30: #484646,
+  35: #535252,
+  40: #5F5E5E,
+  50: #787776,
+  60: #929090,
+  70: #ADAAAA,
+  80: #C9C6C5,
+  90: #E5E2E1,
+  95: #F4F0EF,
+  98: #FCF8F8,
+  99: #F6FEFF,
+  100: #FFFFFF
+);
+
+$neutral-variant-pallet: (
+  0: #000000,
+  5: #111111,
+  10: #1C1B1B,
+  15: #262625,
+  20: #313030,
+  25: #3C3B3B,
+  30: #484646,
+  35: #535252,
+  40: #5F5E5D,
+  50: #787776,
+  60: #92908F,
+  70: #ADABAA,
+  80: #C9C6C5,
+  90: #E5E2E1,
+  95: #F4F0EF,
+  98: #FCF8F7,
+  99: #F4FFF5,
+  100: #FFFFFF
+)

@@ -1,0 +1,60 @@
+<div>
+  <div class="table-title">
+    <mat-icon [class]="{'disabled': !hasPrevious}" (click)="previousCalendar()">chevron_left</mat-icon>
+    <h3> {{ currentCalendar.semester | titlecase }} </h3>
+    <mat-icon [class]="{'disabled': !hasNext}" (click)="nextCalendar()">chevron_right</mat-icon>
+  </div>
+  <table aria-label="Elements">
+    <thead>
+      <tr>
+        @for ( day of calenderIds; track day ) {
+          <th>{{ day | titlecase }}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for ( week of currentCalendar; track week.id; let weekIndex = $index; ) {
+        <tr>
+          @for ( id of calenderIds; track id; let dayIndex = $index; ) {
+            @if ( week[id] ) {
+              <td
+                [class]="{
+                  'weekend': id === 'sun' || id === 'mon',
+                  'has-events': week[id]?.events?.length || false,
+                  'first': week[id]?.number === '1' && id !== 'sun',
+                  'during': week[id]?.during
+                }"
+              >
+                <div>
+                  <aside class="day" >
+                    @if( week[id]?.number === "1" || week[id]?.start) {
+                      <strong>{{week[id]?.date?.format("MMM")}}</strong>
+                    }
+                    {{ week[id]?.number }}
+                  </aside>
+                  <section class="events">
+                    @for ( event of week[id]?.events; track event.id ) {
+                      <esl-calendar-event [eventType]="event.type"></esl-calendar-event>
+                    }
+                  </section>
+                </div>
+              </td>
+
+            } @else {
+              <td class="empty-calendar-cell"></td>
+            }
+          }
+        </tr>
+      }
+
+    </tbody>
+  </table>
+  <section class="legend">
+    @for ( type of EventTypes; track type ) {
+      <aside class="key">
+        <esl-calendar-event [eventType]="type"></esl-calendar-event>
+        <span>{{ type | titlecase }}</span>
+      </aside>
+    }
+  </section>
+</div>
