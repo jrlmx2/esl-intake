@@ -1,0 +1,34 @@
+/*
+ Old theme details
+$churchThemeAccent: #004987;
+$churchThemeAccentLight: #70BCFF;
+$churchThemeText: #2D2D2D;
+$churchThemeBackground: #F7F7F7;
+$customAccentBackground: #D8D3CD;
+$customAccentBackgroundLight: #EDEBE9;
+
+.form-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+.bottom-divider {
+  border-bottom: 1px solid $customAccentBackgroundLight;
+}
+
+/* screens *
+$screen-xs-max: 440px;*/
+section {
+  display: flex;
+}
+section mat-tab-group {
+  flex-grow: 2;
+  margin-right: 20px;
+}
+section esl-calendar {
+  max-width: 600px;
+  flex-grow: 2;
+}
+
+/*# sourceMappingURL=home.component.css.map */

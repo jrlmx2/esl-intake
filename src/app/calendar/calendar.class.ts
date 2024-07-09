@@ -58,6 +58,7 @@ export class Day {
   events?: Event[];
   during?: boolean;
   start: boolean;
+  today: boolean;
 
   constructor(date: Dayjs, semesterStart: Dayjs, semesterEnd: Dayjs, start:boolean, events?: Event[]) {
     this.during = semesterStart.isSame(date) || semesterEnd.isSame(date) || (semesterStart.isBefore(date) && semesterEnd.isAfter(date))
@@ -66,6 +67,7 @@ export class Day {
     this.number = date.format("D");
     this.events = events;
     this.start = start;
+    this.today = date.isSame(dayjs());
   }
 }
 
