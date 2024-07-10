@@ -17,7 +17,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.FTPUSER }}
-        key: ${{ secrets.FTPPW }}
+        password: ${{ secrets.FTPPW }}
         port: ${{ secrets.FTPPORT }}
         source: "dist/esl-web/."
         target: "."
