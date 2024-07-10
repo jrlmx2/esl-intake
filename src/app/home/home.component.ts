@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatGridList, MatGridTile } from "@angular/material/grid-list";
 import { CalendarComponent } from "../calendar/calendar.component";
 import { MatTab, MatTabGroup } from "@angular/material/tabs";
+import {ContentComponent} from "../content/content.component";
 
 @Component({
   selector: 'esl-home',
@@ -11,7 +12,8 @@ import { MatTab, MatTabGroup } from "@angular/material/tabs";
     MatGridList,
     CalendarComponent,
     MatTabGroup,
-    MatTab
+    MatTab,
+    ContentComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -1,7 +1,16 @@
 <section>
   <mat-tab-group>
     <mat-tab label="Classes">
-      ESL Fall 2024 will be starting soon! The first class starts on September 9th. See the schedule below!
+      <esl-content sectionTitle="Announcements">
+        ESL Fall 2024 will be starting soon! The first class starts on September 9th. See the schedule below!
+      </esl-content>
+      <esl-content sectionTitle="About ESL">
+        ESL stands for "English as a Second Language." The primary purpose of ESL is to learn English. We teach on
+        Tuesdays to help improve your confidence in communicating with people that speak english.
+      </esl-content>
+      <esl-content sectionTitle="schedule" [divider]="true">
+        <esl-calendar></esl-calendar>
+      </esl-content>
     </mat-tab>
     <mat-tab label="Continued Learning">
       How much would could a wood chuck chuck if a wood chuck could chuck wood?
@@ -10,6 +19,5 @@
 
     </mat-tab>-->
   </mat-tab-group>
-  <esl-calendar></esl-calendar>
 </section>
 

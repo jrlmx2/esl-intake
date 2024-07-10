@@ -1,0 +1,13 @@
+<section>
+  @if(sectionTitle){
+    <header>
+      <h3 [class]="{'divider': divider}">
+        {{ sectionTitle | titlecase }}
+      </h3>
+      @if(divider){
+        <mat-divider></mat-divider>
+      }
+    </header>
+  }
+  <ng-content></ng-content>
+</section>
