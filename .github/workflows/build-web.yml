@@ -11,7 +11,7 @@ jobs:
     - name: Install Deps
       run: npm ci
     - name: Build
-      run: ng build
+      run: npx ng build
     - name: copy files
       uses: appleboy/scp-action@master
       with:
