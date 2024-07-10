@@ -22,3 +22,5 @@ jobs:
         port: ${{ secrets.FTPPORT }}
         source: "."
         target: "public_html/"
+        overwrite: true
+        tar_tmp_path: "."
