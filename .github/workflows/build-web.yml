@@ -5,6 +5,7 @@ jobs:
   deploy-angular:
    runs-on: ubuntu-latest
    container: node:22.3
+   environment: web runner
    steps:
     - name: Check out repository code
       uses: actions/checkout@v4
@@ -12,14 +13,6 @@ jobs:
       run: npm ci
     - name: Build
       run: npx ng build
-    - name: test secret
-      env:
-        t: ${{ secrets.FTPPORT }}
-      run: |
-        if [ $t -eq 21 ]
-        then
-          echo “OK”
-        fi
     - name: copy files
       uses: appleboy/scp-action@master
       with:
