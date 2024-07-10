@@ -12,7 +12,7 @@ jobs:
     - name: Install Deps
       run: npm ci
     - name: angular build
-      run: npx ng build && cd dist/esl-web/browser
+      run: npx ng build
     - name: deploy via scp to server
       uses: appleboy/scp-action@master
       with:
@@ -20,7 +20,8 @@ jobs:
         username: ${{ secrets.FTPUSER }}
         password: ${{ secrets.FTPPW }}
         port: ${{ secrets.FTPPORT }}
-        source: "."
+        source: "dist/esl-web/browser/."
         target: "public_html/"
         overwrite: true
+        strip_components: 3
         tar_tmp_path: "."
