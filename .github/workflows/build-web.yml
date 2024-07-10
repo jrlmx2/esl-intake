@@ -13,7 +13,7 @@ jobs:
     - name: Build
       run: npx ng build
     - name: test secret
-      with:
+      env:
         t: ${{ secrets.FTPPORT }}
       run: |
         if [ $t -eq 21 ]
