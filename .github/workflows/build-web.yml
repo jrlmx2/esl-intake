@@ -1,0 +1,23 @@
+name: build-angular
+run-name: ${{ github.actor }} is deploying a new version of ESL Web
+on: [push]
+jobs:
+  deploy-angular:
+   runs-on: ubuntu-latest
+   container: node:22.3
+   steps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
+    - name: Install Deps
+      run: npm ci
+    - name: Build
+      run: ng build
+    - name: copy files
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.FTPUSER }}
+        key: ${{ secrets.FTPPW }}
+        port: ${{ secrets.FTPPORT }}
+        source: "dist/esl-web/."
+        target: "."
