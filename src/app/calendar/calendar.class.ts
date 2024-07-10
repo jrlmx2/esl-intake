@@ -176,8 +176,10 @@ export class Calendar implements Iterable<CalendarRow> {
       throw Error("failed to establish semester end.");
     }
 
-    const calendarStart = start.clone().add(-14, 'days');
-    const calendarEnd = end.clone().add(14, 'days');
+    const calendarStart = start.clone().add(-5, 'days');
+    const calendarEnd = end.clone().add(10, 'days');
+
+    const classStart = semester.firstClass()!;
 
     let workingDate = calendarStart.clone();
     let month: Month = Month.from(workingDate);
@@ -190,7 +192,7 @@ export class Calendar implements Iterable<CalendarRow> {
       }
 
       const events = semester.eventAt(workingDate);
-      day = new Day(workingDate, start, end, calendarStart.isSame(workingDate), events)
+      day = new Day(workingDate, classStart, end, calendarStart.isSame(workingDate), events)
       calendarRow[ calenderIds[workingDate.day()] ] = day;
       month.add(day);
       workingDate = workingDate.add(1, 'days');
@@ -200,6 +202,8 @@ export class Calendar implements Iterable<CalendarRow> {
         calendarRow = calendarRowCreator(workingDate);
       }
     }
+
+    calendar.calendarRows.push(calendarRow);
 
     return calendar;
   }

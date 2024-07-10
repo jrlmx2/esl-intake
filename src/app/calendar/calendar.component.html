@@ -21,7 +21,7 @@
                 [class]="{
                   'weekend': id === 'sun' || id === 'mon',
                   'has-events': week[id]?.events?.length || false,
-                  'first': week[id]?.number === '1' && id !== 'sun',
+                  'first': ( week[id]?.number === '1') && id !== 'sun',
                   'during': week[id]?.during
                 }"
               >

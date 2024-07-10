@@ -1,4 +1,5 @@
 $calendar-border: 1px solid rgba(#343434, 0.6);
+$new-month-calendar-border: 2px solid rgba(#343434, 0.6);
 
 div {
   width: 100%;
@@ -43,7 +44,7 @@ div {
 
     tbody {
       tr {
-        background-color: rgba(#FFFAF0, 0.5);
+        background-color: rgba(#FFFAF0, 0.4);
 
         td {
           position: relative;
@@ -57,7 +58,7 @@ div {
           vertical-align: top;
 
           &.first {
-            border-left-width: 2px;
+            border-left: $calendar-border;
           }
 
           &.during {
@@ -81,8 +82,6 @@ div {
           &:last-child {
             border-right: $calendar-border;
           }
-
-
 
           .calendar-content {
             position: relative;

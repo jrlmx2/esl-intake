@@ -1,19 +1,12 @@
 <main>
   <header>
     <h3>ESL &#64; Grace Reformed Baptist Church</h3>
+    <section class="links">
+      <mat-icon (click)="openMaps()" i18n="directions | link test for directions in the footer">location_on</mat-icon>
+      <mat-icon (click)="openMail()" i18n="contact | link test for directions in the footer">mail</mat-icon>
+    </section>
   </header>
   <section>
     <router-outlet></router-outlet>
   </section>
-  <footer>
-    <address>
-      <a target="_blank" href="mailto:esl@grbc.com?subject=ESL+Program+Inquiry">Questions? Contact Us</a>
-
-      <pre>
-        Grace Reformed Baptist Church
-        939 S Third St.
-        Mebane, NC 23702
-      </pre>
-    </address>
-  </footer>
 </main>

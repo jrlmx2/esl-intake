@@ -1,4 +1,4 @@
-import { Event } from "./calendar-datasource";
+import { Event, EventType } from "./calendar-datasource";
 import { Dayjs } from "dayjs";
 
 export class Semester {
@@ -6,7 +6,7 @@ export class Semester {
   semesterHalf: string;
   events: Event[] = new Array<Event>();
 
-  constructor(semesterHalf: string, semesterYear: number, events: Event[]) {
+  constructor( semesterHalf: string, semesterYear: number, events: Event[] ) {
     this.semesterYear = semesterYear;
     this.events = events;
     this.semesterHalf = semesterHalf;
@@ -16,11 +16,21 @@ export class Semester {
     return this.events.at(0)?.date;
   }
 
+  firstClass(): Dayjs | undefined {
+    for ( let ev of this.events ) {
+      if ( ev.type === EventType.class ) {
+        return ev.date;
+      }
+    }
+
+    return undefined;
+  }
+
   lastDate(): Dayjs | undefined {
     return this.events.at(-1)?.date;
   }
 
-  eventAt(date: Dayjs): Event[] {
+  eventAt( date: Dayjs ): Event[] {
     return this.events.filter( (event: Event) => event.date.isSame(date) );
   }
 
