@@ -1,8 +1,14 @@
 name: build-angular
 run-name: ${{ github.actor }} is deploying a new version of ESL Web
-on: [push]
+on:
+  push:
+    branches:
+      - 'release'
+  pull_request:
+    branches:
+      - 'release'
 jobs:
-  deploy-angular:
+  build:
    runs-on: ubuntu-latest
    container: node:22.3
    environment: web runner
