@@ -29,7 +29,6 @@ section header {
 }
 section header h3 {
   position: relative;
-  width: 30%;
   text-align: left;
   height: fit-content;
   margin: 0 0 12px;

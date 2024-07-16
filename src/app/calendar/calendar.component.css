@@ -1,3 +1,24 @@
+/*
+ Old theme details
+$churchThemeAccent: #004987;
+$churchThemeAccentLight: #70BCFF;
+$churchThemeText: #2D2D2D;
+$churchThemeBackground: #F7F7F7;
+$customAccentBackground: #D8D3CD;
+$customAccentBackgroundLight: #EDEBE9;
+
+.form-text {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+.bottom-divider {
+  border-bottom: 1px solid $customAccentBackgroundLight;
+}
+
+/* screens *
+$screen-xs-max: 440px;*/
 div {
   width: 100%;
 }
@@ -12,6 +33,11 @@ div .table-title h3 {
   text-align: center;
   font-weight: 400;
   margin: 0;
+}
+@media only screen and (width <= 380px) {
+  div .table-title h3 {
+    letter-spacing: 2px;
+  }
 }
 div .table-title mat-icon.disabled {
   visibility: hidden;
@@ -33,6 +59,11 @@ div table thead tr {
 div table thead tr th {
   letter-spacing: 2px;
   font-weight: 300;
+}
+@media only screen and (width <= 380px) {
+  div table thead tr th {
+    letter-spacing: 0;
+  }
 }
 div table tbody tr {
   background-color: rgba(255, 250, 240, 0.4);
@@ -92,15 +123,24 @@ div .legend {
   border: 1px solid rgba(52, 52, 52, 0.4);
   padding: 8px 0;
   background-color: rgba(255, 250, 240, 0.4);
+  flex-wrap: wrap;
 }
 div .legend .key {
-  flex-grow: 1;
+  min-width: 60px;
+  letter-spacing: 1px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  min-width: 60px;
-  letter-spacing: 1px;
+}
+div .legend .key esl-calendar-event {
+  margin-right: 8px;
+}
+@media only screen and (width <= 380px) {
+  div .legend .key {
+    width: 50%;
+    letter-spacing: 0;
+    font-size: 16px;
+  }
 }
 
 /*# sourceMappingURL=calendar.component.css.map */

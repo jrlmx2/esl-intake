@@ -1,3 +1,5 @@
+@use '../../theme' as theme;
+
 $calendar-border: 1px solid rgba(#343434, 0.6);
 $new-month-calendar-border: 2px solid rgba(#343434, 0.6);
 
@@ -11,6 +13,9 @@ div {
       text-align: center;
       font-weight: 400;
       margin: 0;
+      @media only screen and (width <= theme.$small-screen) {
+        letter-spacing: 2px;
+      }
     }
 
     mat-icon.disabled {
@@ -38,6 +43,11 @@ div {
         th {
           letter-spacing: 2px;
           font-weight: 300;
+
+          @media only screen and (width <= theme.$small-screen) {
+            letter-spacing: 0;
+
+          }
         }
       }
     }
@@ -112,14 +122,23 @@ div {
     border: 1px solid rgba(#343434, 0.40);
     padding: 8px 0;
     background-color: rgba(#FFFAF0, 0.40);
+    flex-wrap: wrap;
     .key {
-      flex-grow: 1;
+      min-width: 60px;
+      letter-spacing: 1px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
-      min-width: 60px;
-      letter-spacing: 1px;
+      esl-calendar-event {
+        margin-right: 8px;
+      }
+
+      @media only screen and (width <= theme.$small-screen) {
+        width: 50%;
+        letter-spacing: 0;
+        font-size: 16px;
+
+      }
     }
   }
 }

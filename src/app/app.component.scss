@@ -16,6 +16,11 @@ main {
       display: flex;
       justify-content: space-evenly;
       width: 400px;
+
+      @media (screen <= theme.$small-screen) {
+        margin: 8px 0;
+        padding: 8px 0;
+      }
     }
 
   }
