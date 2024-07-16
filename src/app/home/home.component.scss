@@ -2,12 +2,4 @@
 
 section {
   display: flex;
-    mat-tab-group {
-      flex-grow: 2;
-      margin-right: 20px;
-    }
-    esl-calendar {
-      max-width: 600px;
-      flex-grow: 2;
-    }
 }
