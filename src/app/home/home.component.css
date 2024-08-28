@@ -20,7 +20,16 @@ $customAccentBackgroundLight: #EDEBE9;
 /* screens *
 $screen-xs-max: 440px;*/
 section {
+  display: block;
+}
+section aside {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 24px;
+  font-size: 18px;
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=home.component.css.map */

@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { LowerCasePipe, TitleCasePipe } from "@angular/common";
-import { EventType } from "../calendar-datasource";
+import { Component, Input } from '@angular/core'
+import { LowerCasePipe, TitleCasePipe } from '@angular/common'
+import { EventType } from '../calendar-datasource'
 
 @Component({
   selector: 'esl-calendar-event',
@@ -13,5 +13,6 @@ import { EventType } from "../calendar-datasource";
   styleUrl: './calendar-event.component.scss'
 })
 export class CalendarEventComponent {
-  @Input() eventType!: EventType;
+  @Input() eventType!: EventType
+  @Input() displayText!: string
 }
