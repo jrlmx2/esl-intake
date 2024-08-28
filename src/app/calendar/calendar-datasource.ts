@@ -51,6 +51,7 @@ const semesters: Semester[] = [
     { id: Symbol(), type: EventType.class, date: dayjs('09/24/2024') },
     { id: Symbol(), type: EventType.class, date: dayjs('10/01/2024') },
     { id: Symbol(), type: EventType.class, date: dayjs('10/08/2024') },
+    { id: Symbol(), type: EventType.social, date: dayjs('10/15/2024') },
     { id: Symbol(), type: EventType.class, date: dayjs('10/15/2024') },
     { id: Symbol(), type: EventType.class, date: dayjs('10/22/2024') },
     { id: Symbol(), type: EventType.class, date: dayjs('10/29/2024') },
