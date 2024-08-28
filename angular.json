@@ -8,7 +8,10 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
-          "es-US": "src/app/locales/messages.es-us.xlf"
+          "es-US": {
+            "baseHref": "",
+            "translation": "src/app/locales/messages.es-us.xlf"
+          }
         }
       },
       "schematics": {

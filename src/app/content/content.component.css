@@ -22,13 +22,11 @@ $screen-xs-max: 440px;*/
 section {
   margin: 24px;
 }
-
 section header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 section header h3 {
   position: relative;
   text-align: left;
@@ -38,11 +36,9 @@ section header h3 {
   background-color: #F7F7F7;
   flex-grow: 2;
 }
-
 section header h3.divider {
   margin-bottom: 0;
 }
-
 section header mat-divider {
   margin: 0 0 24px;
   position: relative;
