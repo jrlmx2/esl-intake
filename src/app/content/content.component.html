@@ -1,10 +1,10 @@
 <section>
-  @if(sectionTitle){
+  @if (sectionTitle) {
     <header>
       <h3 [class]="{'divider': divider}">
         {{ sectionTitle | titlecase }}
       </h3>
-      @if(divider){
+      @if (divider) {
         <mat-divider></mat-divider>
       }
     </header>

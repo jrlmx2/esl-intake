@@ -1,17 +1,21 @@
 @use "../theme" as theme;
 
 main {
+  scroll-padding: 0 24px 64px;
   padding: 0 24px 64px;
-  header{
-    padding-bottom:40px;
+
+  header {
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
     height: 100px;
     align-items: center;
     justify-content: space-evenly;
+
     h3 {
       letter-spacing: 1px;
     }
+
     section.links {
       display: flex;
       justify-content: space-evenly;
@@ -26,6 +30,6 @@ main {
   }
 
   section {
-
+    width: 100%;
   }
 }

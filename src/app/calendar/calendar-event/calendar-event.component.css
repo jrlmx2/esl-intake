@@ -24,15 +24,19 @@ section {
   height: 12px;
   margin-left: 4px;
 }
+
 section.orientation {
   background-color: #4281A4;
 }
+
 section.class {
   background-color: #255555;
 }
+
 section.social {
   background-color: #EB6534;
 }
+
 section.graduation {
   background-color: #6F1A07;
 }

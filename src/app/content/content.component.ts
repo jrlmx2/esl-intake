@@ -1,6 +1,6 @@
-import {Component, Input} from '@angular/core';
-import {TitleCasePipe} from "@angular/common";
-import {MatDivider} from "@angular/material/divider";
+import { Component, Input } from '@angular/core'
+import { TitleCasePipe } from '@angular/common'
+import { MatDivider } from '@angular/material/divider'
 
 @Component({
   selector: 'esl-content',
@@ -13,7 +13,7 @@ import {MatDivider} from "@angular/material/divider";
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-  @Input() sectionTitle?: string;
-  @Input() divider: boolean = false;
+  @Input() sectionTitle?: string
+  @Input() divider: boolean = false
 
 }
