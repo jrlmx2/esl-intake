@@ -10,18 +10,17 @@ const dayjs = dateLib()
 
 
 @Component({
-  selector: 'esl-home',
-  standalone: true,
-  imports: [
-    MatGridTile,
-    MatGridList,
-    CalendarComponent,
-    MatTabGroup,
-    MatTab,
-    ContentComponent
-  ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'esl-home',
+    imports: [
+        MatGridTile,
+        MatGridList,
+        CalendarComponent,
+        MatTabGroup,
+        MatTab,
+        ContentComponent
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   startDay = dayjs('09/10/2024').format('MMMM Do')

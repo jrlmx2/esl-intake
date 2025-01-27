@@ -8,19 +8,18 @@ import { JsonPipe, TitleCasePipe, UpperCasePipe } from '@angular/common'
 import { MatIcon } from '@angular/material/icon'
 
 @Component({
-  selector: 'esl-calendar',
-  templateUrl: './calendar.component.html',
-  styleUrl: './calendar.component.scss',
-  standalone: true,
-  imports: [
-    MatPaginatorModule,
-    MatTableModule,
-    CalendarEventComponent,
-    TitleCasePipe,
-    UpperCasePipe,
-    MatIcon,
-    JsonPipe
-  ]
+    selector: 'esl-calendar',
+    templateUrl: './calendar.component.html',
+    styleUrl: './calendar.component.scss',
+    imports: [
+        MatPaginatorModule,
+        MatTableModule,
+        CalendarEventComponent,
+        TitleCasePipe,
+        UpperCasePipe,
+        MatIcon,
+        JsonPipe
+    ]
 })
 export class CalendarComponent {
   protected readonly calenderIds = calendarIds

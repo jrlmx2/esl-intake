@@ -142,6 +142,7 @@ $light-theme: mat.define-theme((
     primary: $_primary,
     tertiary: $_tertiary,
     use-system-variables: true,
+    system-variables-prefix: sys,
   ),
   typography: (
     plain-family: theme.$font-osans,
@@ -150,6 +151,7 @@ $light-theme: mat.define-theme((
     medium-weight: 500,
     regular-weight: 400,
     use-system-variables: true,
+    system-variables-prefix: sys,
   ),
   density: (
     scale: 0,
@@ -161,6 +163,7 @@ $dark-theme: mat.define-theme((
     primary: $_primary,
     tertiary: $_tertiary,
     use-system-variables: true,
+    system-variables-prefix: sys,
   ),
   typography: (
     plain-family: theme.$font-osans,
@@ -168,7 +171,8 @@ $dark-theme: mat.define-theme((
     bold-weight: 800,
     medium-weight: 500,
     regular-weight: 400,
-    use-system-variables: true
+    use-system-variables: true,
+    system-variables-prefix: sys,
   ),
   density: (
     scale: 0,

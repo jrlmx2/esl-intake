@@ -6,11 +6,10 @@ import { Platform } from '@angular/cdk/platform'
 const body: string = encodeURIComponent('Me gustaría saber más sobre el programa de ESL.')
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, MatIcon],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet, MatIcon],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 
 export class AppComponent {
