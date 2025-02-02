@@ -4,44 +4,39 @@
     <body>
       <trans-unit id="1950423182974343893" datatype="html">
         <source>ESL at Grace Reformed Baptist Church</source>
-        <target> ESL en la iglesia Grace Reformed Baptist Church </target>
+        <target>ESL en la iglesia Grace Reformed Baptist Church</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
+
       <trans-unit id="1047475949969466940" datatype="html">
         <source>class</source>
         <target>clase</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calendar/calendar-datasource.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">13</context>
         </context-group>
         <note priority="1" from="description">event type class</note>
       </trans-unit>
-      <trans-unit id="1956073378030411818" datatype="html">
-        <source>Classes</source>
-        <target>Clases</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">3,4</context>
-        </context-group>
-      </trans-unit>
+
       <trans-unit id="7116872957204885589" datatype="html">
         <source>social</source>
         <target>social</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calendar/calendar-datasource.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">14</context>
         </context-group>
         <note priority="1" from="description">event type social</note>
       </trans-unit>
+
       <trans-unit id="2844497792719101730" datatype="html">
         <source>orientation</source>
         <target>Orientación</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calendar/calendar-datasource.ts</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">15</context>
         </context-group>
         <note priority="1" from="description">event type orientation</note>
       </trans-unit>
@@ -50,7 +45,7 @@
         <target>Graduación</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/calendar/calendar-datasource.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">16</context>
         </context-group>
         <note priority="1" from="description">event type graduation</note>
       </trans-unit>
@@ -77,46 +72,62 @@
         <target>Anuncios</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">4,5</context>
+          <context context-type="linenumber">2,4</context>
         </context-group>
         <note priority="1" from="description">announcements</note>
       </trans-unit>
-      <trans-unit id="1671562916994965923" datatype="html">
-        <source>ESL Fall 2024 will be starting soon! The first class starts on <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/><x id="INTERPOLATION" equiv-text="{{ startDay }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. See the schedule below! </source>
-        <target> ¡Las clases de ESL en otoño del 2024 empiezan pronto! El primer día de clases es el 10 de septiembre. ¡Vea el horario abajo!</target>
+      <trans-unit id="8027849755035085889" datatype="html">
+        <source>ESL
+          <x id="INTERPOLATION" equiv-text="{{ semester }}"/>
+          <x id="INTERPOLATION_1" equiv-text="{{ startYear }}"/>
+          will be starting soon!
+        </source>
+        <target>¡Las clases de ESL en
+          <x id="INTERPOLATION" equiv-text="{{ semester }}"/>
+          del
+          <x id="INTERPOLATION_1" equiv-text="{{ startYear }}"/>
+          empiezan pronto!
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">7,9</context>
+          <context context-type="linenumber">4,5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3751921300765796657" datatype="html">
-        <source>Class Details</source>
-        <target>Detalles de la clase</target>
+      <trans-unit id="2419056115264051560" datatype="html">
+        <source>{VAR_SELECT, select, fall {Fall} spring {Spring}}</source>
+        <target>{VAR_SELECT, select, fall {Otoño} spring {Primavera}}</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">11,12</context>
+          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6089368515452720890" datatype="html">
-        <source>Program Information</source>
-        <target>Información del programa</target>
+      <trans-unit id="4037879291853885160" datatype="html">
+        <source>The first class starts on
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>
+          <x id="INTERPOLATION" equiv-text="{{ startMonth }}"/>
+          <x id="INTERPOLATION_1" equiv-text="{{ startDay }}"/>
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. See the schedule below!
+        </source>
+        <target>El primer día de clases es el
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>
+          <x id="INTERPOLATION_1" equiv-text="{{ startDay }}"/>
+          de
+          <x id="INTERPOLATION" equiv-text="{{ startMonth }}"/>
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. ¡Vea el horario abajo!
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">12,13</context>
+          <context context-type="linenumber">6,8</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="3128163794297493171" datatype="html">
-        <source>About ESL</source>
-        <target>Sobre ESL</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">16,17</context>
-        </context-group>
-        <note priority="1" from="description">aboutesl</note>
       </trans-unit>
       <trans-unit id="6292375678453738237" datatype="html">
-        <source> ESL stands for &quot;English as a Second Language.&quot; The primary purpose of ESL is to learn English. We teach on Tuesdays to help improve your confidence in communicating with people that speak english. </source>
-        <target>ESL significa English as a Second Language, o Inglés como Segunda Lengua. El propósito principal es que cualquiera pueda venir para aprender inglés. Tenemos clases cada martes para ayudarle a que se sienta más cómodo con el idioma y para que se pueda comunicar con personas que hablan inglés.</target>
+        <source>ESL stands for &quot;English as a Second Language.&quot; The primary purpose of ESL is to learn English.
+          We teach on Tuesdays to help improve your confidence in communicating with people that speak english.
+        </source>
+        <target>ESL significa English as a Second Language, o Inglés como Segunda Lengua. El propósito principal es que
+          cualquiera pueda venir para aprender inglés. Tenemos clases cada martes para ayudarle a que se sienta más
+          cómodo con el idioma y para que se pueda comunicar con personas que hablan inglés.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
           <context context-type="linenumber">18,19</context>
@@ -127,33 +138,18 @@
         <target>horario</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">22,23</context>
+          <context context-type="linenumber">16,17</context>
         </context-group>
         <note priority="1" from="description">schedule</note>
       </trans-unit>
-      <trans-unit id="6438333658142839457" datatype="html">
-        <source>Continued Learning</source>
-        <target>Continúe su aprendizaje</target>
+      <trans-unit id="3128163794297493171" datatype="html">
+        <source>About ESL</source>
+        <target>Sobre ESL</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">26,27</context>
+          <context context-type="linenumber">10,11</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="2446117790692479672" datatype="html">
-        <source>Resources</source>
-        <target>Recursos</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">27,28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="839671167378006791" datatype="html">
-        <source> How much would could a wood chuck chuck if a wood chuck could chuck wood? </source>
-        <target>How much would could a wood chuck chuck if a wood chuck could chuck wood??</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
+        <note priority="1" from="description">aboutesl</note>
       </trans-unit>
     </body>
   </file>
