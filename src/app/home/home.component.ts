@@ -1,8 +1,10 @@
 import { Component } from '@angular/core'
-import { CalendarComponent } from '../calendar/calendar.component'
+import { CalendarComponent } from '../calendar/component/calendar.component'
 import { ContentComponent } from '../content/content.component'
 
 import { dateLib } from '../dayjs'
+import { CalendarService } from '../calendar/service/calendar.service'
+import { DateService } from '../date.service'
 
 const dayjs = dateLib()
 
@@ -13,5 +15,24 @@ const dayjs = dateLib()
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-    startDay = dayjs('02/04/2025').format('MMMM Do')
+    startDay: string = ''
+    startMonth: string = ''
+    startYear: number = 0
+    semester: string = ''
+    setValues = false
+
+    constructor(
+        private calendarService: CalendarService,
+        private dates: DateService
+    ) {
+        calendarService.currentCalendarObservable.subscribe(calendar => {
+            if (!calendar || this.setValues) return
+            const day = calendar.semester.firstDate()!
+            this.startMonth = day.format('MMMM')
+            this.startDay = day.format('D')
+            this.startYear = calendar.semester.semesterYear
+            this.semester = calendar.semester.semesterHalf
+            this.setValues = true
+        })
+    }
 }

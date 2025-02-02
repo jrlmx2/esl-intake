@@ -1,20 +1,21 @@
 <div>
   <div class="download-links">
     <div>
-      <a [href]="infoLink" target="_blank">
+      <a [href]="infoLink()" target="_blank">
         <mat-icon>info</mat-icon>
       </a>
     </div>
     <div>
-      <a [href]="detailsLink" target="_blank">
+      <a [href]="scheduleLink()" target="_blank">
         <mat-icon>cloud_download</mat-icon>
       </a>
     </div>
   </div>
   <div class="table-title">
-    <mat-icon (click)="previousCalendar()" [class]="{'disabled': !hasPrevious}">chevron_left</mat-icon>
-    <h3> {{ currentCalendar.semester.semester | titlecase }} </h3>
-    <mat-icon (click)="nextCalendar()" [class]="{'disabled': !hasNext}">chevron_right</mat-icon>
+    <mat-icon (click)="calendarService.previous()" [class]="{'disabled': !calendarService.hasPrevious}">chevron_left
+    </mat-icon>
+    <h3> {{ calendarService.semester | titlecase }} </h3>
+    <mat-icon (click)="calendarService.next()" [class]="{'disabled': !calendarService.hasNext}">chevron_right</mat-icon>
   </div>
   <table aria-label="Elements">
     <thead>
@@ -25,7 +26,7 @@
     </tr>
     </thead>
     <tbody>
-      @for (week of currentCalendar; track week.id; let weekIndex = $index; ) {
+      @for (week of currentCalendar(); track week.id; let weekIndex = $index; ) {
         <tr>
           @for (id of calenderIds; track id.key; let dayIndex = $index; ) {
             @if (week[id.key]) {
