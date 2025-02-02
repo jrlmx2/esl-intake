@@ -5,9 +5,25 @@ $new-month-calendar-border: 2px solid rgba(#343434, 0.6);
 
 div {
   width: 100%;
+
+  .download-links {
+    display: flex;
+    flex-direction: row-reverse;
+    height: min-content;
+    margin-top: -1.5rem;
+
+    div {
+      box-sizing: border-box;
+      display: inline-block;
+      max-width: min-content;
+      margin-left: 2.7rem;
+    }
+  }
+
   .table-title {
     display: flex;
     justify-content: space-between;
+
     h3 {
       letter-spacing: 3px;
       text-align: center;
@@ -21,10 +37,12 @@ div {
     mat-icon.disabled {
       visibility: hidden;
     }
+
     margin-bottom: 4px;
     padding: 0 12px;
 
   }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -40,6 +58,7 @@ div {
         width: 100%;
         height: 28px;
         vertical-align: bottom;
+
         th {
           letter-spacing: 2px;
           font-weight: 300;
@@ -112,6 +131,7 @@ div {
       }
     }
   }
+
   .legend {
     display: flex;
     width: 100%;
@@ -123,12 +143,14 @@ div {
     padding: 8px 0;
     background-color: rgba(#FFFAF0, 0.40);
     flex-wrap: wrap;
+
     .key {
       min-width: 60px;
       letter-spacing: 1px;
       display: flex;
       flex-direction: row;
       align-items: center;
+
       esl-calendar-event {
         margin-right: 8px;
       }

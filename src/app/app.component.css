@@ -20,6 +20,7 @@ $customAccentBackgroundLight: #EDEBE9;
 /* screens *
 $screen-xs-max: 440px;*/
 main {
+  scroll-padding: 0 24px 64px;
   padding: 0 24px 64px;
 }
 main header {
@@ -43,6 +44,9 @@ main header section.links {
     margin: 8px 0;
     padding: 8px 0;
   }
+}
+main section {
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.component.css.map */

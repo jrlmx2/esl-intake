@@ -26,8 +26,8 @@ jobs:
         username: ${{ secrets.FTPUSER }}
         password: ${{ secrets.FTPPW }}
         port: ${{ secrets.FTPPORT }}
-        source: "dist/esl-web/browser/."
+        source: "dist/esl-web/browser/es-US/."
         target: "public_html/"
         overwrite: true
-        strip_components: 3
+        strip_components: 4
         tar_tmp_path: "."

@@ -1,25 +1,20 @@
 <section>
-  <mat-tab-group>
-    <mat-tab label="Classes">
-      <esl-content sectionTitle="Announcements">
-        ESL Fall 2024 will be starting soon! The first class starts on September 10th. See the schedule below!
-      </esl-content>
-      <esl-content sectionTitle="About ESL">
-        ESL stands for "English as a Second Language." The primary purpose of ESL is to learn English. We teach on
-        Tuesdays to help improve your confidence in communicating with people that speak english.
-      </esl-content>
-      <esl-content sectionTitle="schedule">
-        <esl-calendar></esl-calendar>
-      </esl-content>
-    </mat-tab>
-    <mat-tab label="Continued Learning">
-      <esl-content sectionTitle="Resources">
-        How much would could a wood chuck chuck if a wood chuck could chuck wood?
-      </esl-content>
-    </mat-tab>
-    <!--<mat-tab label="Signup">
-
-    </mat-tab>-->
-  </mat-tab-group>
+  <esl-content i18n-sectionTitle="announcements" sectionTitle="Announcements">
+    <ng-container>
+      <ng-container i18n>
+        ESL Fall 2024 will be starting soon! The first class starts on <strong>{{ startDay }}</strong>. See the
+        schedule below!
+      </ng-container>
+    </ng-container>
+  </esl-content>
+  <esl-content i18n-sectionTitle="aboutesl" sectionTitle="About ESL">
+    <ng-container i18n>
+      ESL stands for "English as a Second Language." The primary purpose of ESL is to learn English. We teach on
+      Tuesdays to help improve your confidence in communicating with people that speak english.
+    </ng-container>
+  </esl-content>
+  <esl-content i18n-sectionTitle="schedule" sectionTitle="schedule">
+    <esl-calendar></esl-calendar>
+  </esl-content>
 </section>
 
