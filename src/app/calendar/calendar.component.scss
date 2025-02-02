@@ -6,6 +6,20 @@ $new-month-calendar-border: 2px solid rgba(#343434, 0.6);
 div {
   width: 100%;
 
+  .download-links {
+    display: flex;
+    flex-direction: row-reverse;
+    height: min-content;
+    margin-top: -1.5rem;
+
+    div {
+      box-sizing: border-box;
+      display: inline-block;
+      max-width: min-content;
+      margin-left: 2.7rem;
+    }
+  }
+
   .table-title {
     display: flex;
     justify-content: space-between;
