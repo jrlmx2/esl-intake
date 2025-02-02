@@ -1,7 +1,19 @@
 <div>
+  <div class="download-links">
+    <div>
+      <a [href]="infoLink" target="_blank">
+        <mat-icon>info</mat-icon>
+      </a>
+    </div>
+    <div>
+      <a [href]="detailsLink" target="_blank">
+        <mat-icon>cloud_download</mat-icon>
+      </a>
+    </div>
+  </div>
   <div class="table-title">
     <mat-icon (click)="previousCalendar()" [class]="{'disabled': !hasPrevious}">chevron_left</mat-icon>
-    <h3> {{ currentCalendar.semester | titlecase }} </h3>
+    <h3> {{ currentCalendar.semester.semester | titlecase }} </h3>
     <mat-icon (click)="nextCalendar()" [class]="{'disabled': !hasNext}">chevron_right</mat-icon>
   </div>
   <table aria-label="Elements">

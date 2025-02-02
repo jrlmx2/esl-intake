@@ -1,38 +1,20 @@
 <section>
-  <mat-tab-group>
-    <mat-tab i18n-label label="Classes">
-      <esl-content i18n-sectionTitle="announcements" sectionTitle="Announcements">
-        <ng-container>
-          <ng-container i18n>
-            ESL Fall 2024 will be starting soon! The first class starts on <strong>{{ startDay }}</strong>. See the
-            schedule below!
-          </ng-container>
-          <aside>
-            <a target="_blank" class="class-details-pdf-link" href="/clases%20de%20ingles%209-10-24.pdf" i18n>Class Details</a>
-            <a target="_blank" class="program-information-pdf-link" href="/Program%20Information%20Fall%202024.pdf" i18n>Program Information</a>
-          </aside>
-        </ng-container>
-      </esl-content>
-      <esl-content i18n-sectionTitle="aboutesl" sectionTitle="About ESL">
-        <ng-container i18n>
-          ESL stands for "English as a Second Language." The primary purpose of ESL is to learn English. We teach on
-          Tuesdays to help improve your confidence in communicating with people that speak english.
-        </ng-container>
-      </esl-content>
-      <esl-content i18n-sectionTitle="schedule" sectionTitle="schedule">
-        <esl-calendar></esl-calendar>
-      </esl-content>
-    </mat-tab>
-    <mat-tab i18n-label label="Continued Learning">
-      <esl-content i18n-sectionTitle sectionTitle="Resources">
-        <ng-container i18n>
-          How much would could a wood chuck chuck if a wood chuck could chuck wood?
-        </ng-container>
-      </esl-content>
-    </mat-tab>
-    <!--<mat-tab label="Signup">
-
-    </mat-tab>-->
-  </mat-tab-group>
+  <esl-content i18n-sectionTitle="announcements" sectionTitle="Announcements">
+    <ng-container>
+      <ng-container i18n>
+        ESL Fall 2024 will be starting soon! The first class starts on <strong>{{ startDay }}</strong>. See the
+        schedule below!
+      </ng-container>
+    </ng-container>
+  </esl-content>
+  <esl-content i18n-sectionTitle="aboutesl" sectionTitle="About ESL">
+    <ng-container i18n>
+      ESL stands for "English as a Second Language." The primary purpose of ESL is to learn English. We teach on
+      Tuesdays to help improve your confidence in communicating with people that speak english.
+    </ng-container>
+  </esl-content>
+  <esl-content i18n-sectionTitle="schedule" sectionTitle="schedule">
+    <esl-calendar></esl-calendar>
+  </esl-content>
 </section>
 
