@@ -21,10 +21,7 @@ export class HomeComponent {
     semester: string = ''
     setValues = false
 
-    constructor(
-        private calendarService: CalendarService,
-        private dates: DateService
-    ) {
+    constructor(calendarService: CalendarService, dates: DateService) {
         calendarService.currentCalendarObservable.subscribe(calendar => {
             if (!calendar || this.setValues) return
             const day = calendar.semester.firstDate()!
